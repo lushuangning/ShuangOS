@@ -4,7 +4,9 @@ Boot 引导程序
 
 从 Boot 跳转到 Loader 程序
 
+Loader 检测硬件信息，实现从实模式到保护模式再到 IA-32e 模式的切换（该部分较为复杂，后面慢慢会再详细讲）
 
+加载内核
 # 使用说明：
 
 环境：Bochs 虚拟机
@@ -14,9 +16,7 @@ Boot 引导程序
 1. 编译
 
 ```shell
-nasm boot.asm -o boot.bin
-
-nasm loader.asm -o loader.bin
+make
 ```
 
 2. 软盘制作
